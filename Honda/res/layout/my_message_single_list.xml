@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent_color" >
+
+    <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/user_imageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/image" />
+
+    <TextView
+        android:id="@+id/user_message_arrow"
+        android:layout_width="10dp"
+        android:layout_height="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/user_imageView" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_message_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/user_message_arrow"
+        android:background="@drawable/user_messges_bg" >
+
+        <TextView
+            android:id="@+id/user_message_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="start"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp"
+            android:text="Here will be the messages of sender, having a long information"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/user_message_date_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/user_message_TV"
+            android:gravity="end"
+            android:paddingBottom="3dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:text="at 6:15 PM 4/16/2015"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/relativelayout_message_date" />
+
+</RelativeLayout>

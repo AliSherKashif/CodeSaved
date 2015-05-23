@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_color"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/friend_imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image" />
+
+    <ImageView
+        android:id="@+id/favorite_image"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignBottom="@+id/friend_imageView"
+        android:layout_alignLeft="@+id/friend_imageView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="favorite button" />
+
+    <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/friend_status_img"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignBottom="@+id/friend_imageView"
+        android:layout_alignRight="@+id/friend_imageView"
+        android:contentDescription="status changed button" />
+
+    <TextView
+        android:id="@+id/friend_name_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/phone_btn"
+        android:layout_toRightOf="@+id/friend_imageView"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:textColor="@color/button_bg_night_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/phone_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/phone_icon"
+        android:contentDescription="call button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/add_participant_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/add_contact_icon"
+        android:contentDescription="add participants button"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/friend_status_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/friend_name_TV"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/add_participant_btn"
+        android:layout_toRightOf="@+id/friend_imageView"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:textColor="@color/Gray"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/location_btn"
+        android:layout_width="20dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/phone_btn"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/map_icon"
+        android:contentDescription="add contact button"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/separator_TV1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/location_btn"
+        android:layout_marginTop="2dp"
+        android:background="@color/button_bg_night_color" />
+
+    <ListView
+        android:id="@+id/messages_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/message_ET"
+        android:layout_below="@+id/separator_TV1"
+        android:divider="@color/white"
+        android:listSelector="@color/transparent_color"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:visibility="invisible" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/messages_listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/message_ET"
+        android:layout_below="@+id/separator_TV1"
+        android:listSelector="@color/transparent_color"
+        android:divider="@color/white"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" >
+    </ListView>
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/send_btn_bg_day"
+        android:contentDescription="send button" />
+
+    <EditText
+        android:id="@+id/message_ET"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/send_btn"
+        android:background="@color/transparent_color"
+        android:gravity="start"
+        
+        android:enabled="false"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:textColor="@color/Gray"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Main Container -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_bg_day_color"
+    android:descendantFocusability="beforeDescendants" >
+
+    <ScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/main_rr_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sign_in_bg_dayp" >
+
+            <TextView
+                android:id="@+id/main_tv_titlebar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true" />
+
+            <RelativeLayout
+                android:id="@+id/sub_main_rr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/main_tv_titlebar" >
+
+
+                    <TextView
+                        android:id="@+id/Email_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="E-mail"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/Email_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/Email_TV"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:ems="10"
+                        android:hint="Enter your email"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/Password_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Email_ET"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Password"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/Password_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/Password_TV"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:ems="10"
+                        android:hint="Enter your password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:password="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" >
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/Login_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/Password_ET"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/button_bg_day"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/remember_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Login_btn"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Remember me"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/separator_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_below="@+id/remember_checkBox"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/forgotPassword_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separator_TV"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="Forgot your password?"
+                        android:textColor="@color/button_bg_night_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/space_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/forgotPassword_TV"
+                        android:layout_marginTop="50dp" >
+                    </TextView>
+                
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

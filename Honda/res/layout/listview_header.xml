@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/green"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="All"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_weight="0.8"
+        android:textSize="10sp"/>
+       <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Change contact list"
+        android:paddingLeft="2dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_weight="0.2"
+        android:textSize="10sp"/>
+    
+    
+
+</LinearLayout>

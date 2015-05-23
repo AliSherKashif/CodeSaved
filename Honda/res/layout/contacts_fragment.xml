@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:background="@color/transparent_color"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/user_imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/image" />
+
+    <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/status_change_btn"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignBottom="@+id/user_imageView"
+        android:layout_toLeftOf="@+id/user_name"
+        android:contentDescription="status changed button"
+        android:src="@drawable/online" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/user_imageView"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="user name"
+        android:textColor="@color/button_bg_night_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/user_imageView"
+        android:paddingLeft="4dp"
+        android:text="user shared status"
+        android:textColor="@color/Gray"
+        android:textSize="10sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/separator_TV0"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/user_imageView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/button_bg_night_color"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/separator_TV0"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/search_view_bg"
+        android:hint="Search email/phone..."
+        android:imeOptions="actionDone"
+        android:paddingLeft="8dp"
+        android:textSize="10sp"
+        android:inputType="textEmailAddress" >
+    </EditText>
+
+    <ListView
+        android:id="@+id/search_contacts_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:layout_marginTop="1dp"
+        android:divider="@color/button_bg_night_color"
+        android:visibility="invisible" >
+    </ListView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizonta_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/contacts_tv"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Contacts"
+                android:textColor="@color/button_bg_night_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/recent_tv"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Recent"
+                android:textColor="@color/Gray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/favorite_tv"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Favorites"
+                android:textColor="@color/Gray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/groups_tv"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Groups"
+                android:textColor="@color/Gray"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/separator_TV1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/horizonta_scrollview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/button_bg_night_color"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/contacts_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/separator_TV4"
+        android:layout_below="@+id/separator_TV1"
+        android:layout_marginTop="1dp"
+        android:divider="@color/contact_fragment_bg"
+        android:visibility="visible" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/separator_TV4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/search_text"
+        android:layout_margin="5dp"
+        android:background="@color/button_bg_night_color"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/button_bg_day_color"
+        android:text="Add New Contact"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/separator_TV2"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/button_bg_day_color" />
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <gradient
+        android:angle="0"
+        android:centerColor="@color/button_bg_night_color"
+        android:endColor="@color/button_bg_night_color"
+        android:startColor="@color/button_bg_night_color" />
+
+    <corners
+        android:bottomLeftRadius="6dp"
+        android:bottomRightRadius="6dp"
+        android:radius="6dp"
+        android:topLeftRadius="6dp"
+        android:topRightRadius="6dp" />
+
+</shape>

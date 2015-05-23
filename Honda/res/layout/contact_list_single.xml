@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent_color" >
+
+   <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/contact_imageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/image" />
+   
+      <com.cygnus.honda.utilities.RoundedImageView
+        android:id="@+id/contact_status_IV"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignBottom="@+id/contact_imageView"
+        android:layout_alignRight="@+id/contact_imageView"
+        android:contentDescription="status changed button"
+        android:src="@drawable/online" />
+
+    <TextView
+        android:id="@+id/contact_name_TV"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/contact_status_IV"
+        android:gravity="start"
+        android:text="contact name"
+        android:textColor="@color/button_bg_night_color"
+        android:paddingRight="2dp"
+         android:textSize="12dp"
+        android:textStyle="bold" />
+
+    
+    <TextView
+        android:id="@+id/contact_status_TV"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/contact_name_TV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:paddingRight="2dp"
+        android:layout_toRightOf="@+id/contact_status_IV"
+        android:gravity="start"
+        android:text="contact status will be here"
+        android:textColor="@color/Gray"
+        android:textSize="8dp"
+         />
+    
+      <TextView
+       
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/contact_status_TV"
+         />
+    
+    
+    
+
+
+</RelativeLayout>

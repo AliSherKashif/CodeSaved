@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_color"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/user_imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/addgroup_btn_bg" />
+
+    <EditText
+        android:id="@+id/group_name_TV"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/user_imageView"
+        android:background="@color/transparent_color"
+        android:hint="Enter Group Name"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:textColor="@color/button_bg_night_color"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/separator_TV1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/user_imageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/button_bg_night_color" />
+
+    <Button
+        android:id="@+id/create_group_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/separator_TV1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/button_bg_night_color"
+        android:contentDescription="attach button"
+        android:text="Create Group"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/create_group_btn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/button_bg_day_color"
+        android:contentDescription="back button"
+        android:text="Back"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
